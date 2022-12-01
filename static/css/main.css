@@ -26,6 +26,11 @@
 }
 
 :root {
+  --dark-green-text: #12322a;
+  --black: #000;
+  --green: #008000;
+  --hover-blue: #d9ede5;
+  --white: hsl(0, 0%, 100%);
 }
 body {
   font-family: "adelle-sans";
@@ -37,7 +42,7 @@ h1 {
 
 h1,
 h2 {
-  color: #12322a;
+  color: var(--dark-green-text);
 }
 
 nav {
@@ -96,7 +101,7 @@ nav {
 }
 .header__link a {
   padding-left: 0.2rem;
-  color: black;
+  color: var(--black);
 }
 .header__link:first-child {
   padding-right: 3.5rem;
@@ -116,24 +121,30 @@ nav {
   text-decoration: none;
   border: 0.0625rem solid;
   height: 2.625rem;
-  width: 9.5rem;
-  color: green;
+  width: 12.5rem;
+
+  color: var(--green);
   align-items: center;
+}
+
+@media (min-width: 40rem) {
+  .bottom-nav ul a {
+    width: 9.5rem;
+  }
 }
 
 .general__link:hover,
 .button-contact:hover {
-  background: #d9ede5;
+  background: var(--hover-blue);
 }
 
 @media (min-width: 70rem) {
-  .bottom-nav ul a:hover {
-  }
   .general__link:hover,
   .button-contact:hover {
     background: none;
   }
 }
+
 @media (min-width: 70rem) {
   .bottom-nav ul a {
     border: none;
@@ -144,16 +155,24 @@ nav {
   .button-contact a {
     background-color: #ff6c37;
     padding: 0.9375rem 1.25rem;
-    color: white;
+    color: var(--white);
     border: none;
   }
   .bottom-nav__link li a {
-    color: black;
+    color: var(--black);
+  }
+  .bottom-nav__link li :hover {
+    color: var(--green);
   }
   .bottom-nav__link li a span {
-    color: white;
+    color: var(--white);
     font-weight: bolder;
   }
+
+  .bottom-nav__link li a span:hover {
+    color: white;
+  }
+
   .button-contact a:hover {
     opacity: 88%;
   }
@@ -197,7 +216,7 @@ nav {
 .orange-tip-button {
   background-color: #ff6c37;
   padding: 2rem;
-  margin: 2rem 0 0 0;
+  margin-top: 2rem;
 }
 
 .tip {
@@ -387,9 +406,9 @@ nav {
 
 .dark-green-main img {
   background-size: 50rem;
-  width: 270px;
+  /*width: 270px;*/
   height: 350px;
-  object-fit: cover;
+  object-fit: contain;
   clip-path: polygon(
     0 0,
     276px 0,
@@ -404,7 +423,7 @@ nav {
 }
 
 .img-with_background {
-  background-position: revert;
+  background-position: 50% 50%;
   background-image: url(../images/half_circle_background.svg);
   background-size: 20rem;
   padding-bottom: 13rem;
@@ -437,7 +456,7 @@ nav {
 
 .overlay-detail img {
   object-fit: cover;
-  aspect-ratio: 3/5;
+  aspect-ratio: 5/9;
 }
 
 .overlay-detail p {
@@ -483,7 +502,7 @@ nav {
 }
 
 .orange-symbol-summary li {
-  list-style: url(../images/icoon_orange_boog_symbol.svg);
+  /* list-style: url(../images/icoon_orange_boog_symbol.svg);*/
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
@@ -501,6 +520,167 @@ nav {
   padding-right: 1rem;
 }
 
+/* aanleg.html */
+.hero-component {
+  background-image: url(../images/aanleg_hero-componen.jpeg);
+  background-repeat: no-repeat;
+  background-position: 50% 41%;
+  background-size: cover;
+  padding: 3rem 0;
+}
+
+#services {
+  width: 25rem;
+}
+
+.page-name {
+  background-color: white;
+  display: flex;
+  position: relative;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.6875rem 0.6875rem;
+  width: max-content;
+}
+
+.page-name a,
+.page-referances a {
+  text-decoration: none;
+  color: black;
+  padding: 0 1rem;
+}
+
+.hero-text {
+  background-color: white;
+  padding: 0rem 1rem 2rem;
+  margin: 4rem 1rem 4rem 2rem;
+  max-width: 565px;
+}
+
+@media (min-width: 70rem) {
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+  .hero-text p {
+    font-size: 1.23rem;
+  }
+}
+
+.hero-text h1 {
+  margin-bottom: 2rem;
+}
+
+.link-to-contact {
+  display: flex;
+  margin-bottom: -3rem;
+  justify-content: flex-end;
+}
+
+.hero-phone-data {
+  background-color: #d9ede5;
+  padding: 1rem 2rem 1rem 1rem;
+}
+
+.hero-phone-data h3 {
+  font-family: "space-grotesk";
+}
+
+.hero-phone {
+  display: flex;
+}
+
+.hero-phone a {
+  color: #13322b;
+  padding-left: 6px;
+}
+
+.white-arrow {
+  background-color: #008754;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.white-arrow img {
+  width: 2rem;
+}
+
+.referances {
+  display: flex;
+  aspect-ratio: 1/2;
+  width: 11rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/* onderhoud.html*/
+.hero-component-maintain {
+  background-image: url(../images/onderhoud_hero-component.png);
+}
+
+/* referenties.html*/
+
+.our-referances {
+  padding: 0 2rem;
+}
+
+.page-referances {
+  background-color: white;
+  display: flex;
+  position: relative;
+  top: 2rem;
+  padding: 0.6875rem 0.6875rem;
+  width: max-content;
+  padding: 0;
+}
+
+.referances-text {
+  margin-top: 2rem;
+}
+
+.referances-text p {
+  padding-top: 1rem;
+}
+
+.referances-id-text p {
+  color: #008755;
+  font-weight: bold;
+}
+
+.referances-id-link {
+  display: flex;
+  font-family: "space-grotesk";
+  padding-top: 1rem;
+}
+
+#privé,
+#zakelijk,
+#openbaar {
+  display: flex;
+  align-items: center;
+  background-color: #d9ede5;
+  padding: 12px;
+  margin-right: 1rem;
+}
+
+#privé img,
+#zakelijk img,
+#openbaar img {
+  width: 1.2rem;
+}
+
+#privé a,
+#zakelijk a,
+#openbaar a {
+  text-decoration: none;
+  color: #13322b;
+  padding: 0 1rem;
+}
+
+/* contact.html*/
+.hero-component-contact {
+  background-image: url(../images/aanleg_hero-componen.jpeg);
+}
 /* footer */
 .container img {
   display: none;

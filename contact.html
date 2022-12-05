@@ -87,16 +87,116 @@
             </p>
           </div>
         </article>
-        <article class="form">
+        <article class="forms">
           <h2>Stuur ons een bericht</h2>
           <p>
             Vul onderstaand formulier in om ons een bericht te sturen. We
             contacteren je zo snel als mogelijk meer informatie voor een gesprek
             of afspraak.
           </p>
-          <form action=""></form>
           <div>
-            <a href="#">Verzenden</a>
+            <div class="radio-element">
+              <legend>Ik zoek informatie als <span>*</span></legend>
+              <div class="private">
+                <input
+                  type="radio"
+                  id="Particulier"
+                  name="drone"
+                  value="Particulier"
+                />
+                <label for="Particulier">Particulier</label>
+              </div>
+              <div class="company">
+                <input
+                  type="radio"
+                  id="Bedrijf/instelling"
+                  name="drone"
+                  value="Bedrijf/instelling"
+                />
+                <label for="Bedrijf/instelling">Bedrijf/instelling</label>
+              </div>
+              <div class="public">
+                <input
+                  type="radio"
+                  id="Openbaar bestuur"
+                  name="drone"
+                  value="Openbaar bestuur"
+                />
+                <label for="Openbaar bestuur">Openbaar bestuur</label>
+              </div>
+            </div>
+            <div class="company-name">
+              <label for="company-name">Bedrijfsnaam/orginisatie:</label>
+              <input
+                type="text"
+                id="company-name"
+                name="company-name"
+                placeholder="Uw bedrijf/orginisatie"
+              />
+            </div>
+            <div class="province">
+              <label for="province">Provincie <span>*</span></label>
+              <select name="province" id="province">
+                <option value="West-Vlaanderen">West-Vlaanderen</option>
+                <option value="Oost-Vlaanderen">Oost-Vlaanderen</option>
+                <option value="Antwerpen">Antwerpen</option>
+                <option value="Henegouwen">Henegouwen</option>
+                <option value="Vlaams-Brabant">Vlaams-Brabant</option>
+                <option value="Namen">Namen</option>
+                <option value="Luik">Luik</option>
+                <option value="Luxemburg">Luxemburg</option>
+                <option value="Limburg">Limburg</option>
+                <option value="Waals-brabant">Waals-brabant</option>
+              </select>
+            </div>
+            <div class="last-name">
+              <label for="name">Familienaam <span>*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="last-name"
+                placeholder="Uw familienaam"
+              />
+            </div>
+            <div class="first-name">
+              <label for="name">Voornaam <span>*</span></label>
+              <input
+                type="text"
+                id="name"
+                name="first-name"
+                placeholder="Uw voornaam"
+              />
+            </div>
+            <div class="phone-number">
+              <label for="telephone">Telefoonnummer <span>*</span></label>
+              <input
+                type="tel"
+                id="telephone"
+                name="user_tel"
+                placeholder="Uw telefoonnummer"
+              />
+            </div>
+            <div class="email">
+              <label for="email">E-mailadres <span>*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="user_email"
+                placeholder="Uw e-mailadres"
+              />
+            </div>
+            <div class="message">          	
+                <label for="message">Uw bericht <span>*</span></label>
+                <textarea id="message" name="message" rows="4" cols="30" placeholder="Uw bericht"/>
+                </textarea>
+            </div>
+            <div class="privacy-policy">
+              <input type="checkbox" id="privacy" name="privacy">
+              <label for="privacy">Ik ga akkoord met het <span><a href="#">Privacybeleid</a></span></label>   
+            </div>
+            <div class="send-form">
+              <a href="#">Verzenden</a>
+            </div>
           </div>
         </article>
       </main>

@@ -56,3 +56,4 @@ const arrByID = arr.filter(filterByID);
 console.log(arrByID);
 */
 })();
+

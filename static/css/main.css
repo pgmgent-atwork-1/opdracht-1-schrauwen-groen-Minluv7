@@ -591,6 +591,14 @@ nav {
 
 .dark-green-main {
   padding: 0 2rem;
+
+  /* flex-wrap: wrap; */
+}
+
+@media (min-width: 62.5rem) {
+  .dark-green-main {
+    display: flex;
+  }
 }
 
 .dark-green-main h3 {
@@ -610,6 +618,12 @@ nav {
   padding-bottom: 1.3rem;
 }
 
+@media (min-width: 62.5rem) {
+  .dark-green-text {
+    width: 55%;
+  }
+}
+
 .button-information {
   background-color: var(--information-orange);
   width: max-content;
@@ -622,11 +636,11 @@ nav {
 }
 
 .dark-green-main img {
-  width: 270px;
-  height: 350px;
-  margin: 0 auto;
+  height: 21rem;
+  position: relative;
   object-fit: cover;
-  margin-top: 10rem;
+  overflow: hidden;
+  margin-top: 3rem;
   clip-path: polygon(
     0 0,
     17.25rem 0,
@@ -634,19 +648,30 @@ nav {
     24.0625rem 8.75rem,
     24.0625rem 21.875rem,
     4.375rem 21.875rem,
-    4.375rem 17.5rem,
-    0 17.5rem
+    4.375rem 12.5rem,
+    0 12.5rem
   );
 }
 
+/* .dark-green-text {
+  width: 24rem;
+  padding-right: 2rem;
+} */
+
 .img-with_background {
-  background-position: 50% 50%;
   background-image: url(../images/half_circle_background.svg);
-  background-size: 17rem;
-  padding-bottom: 7rem;
+  background-size: 20rem;
   background-repeat: no-repeat;
-  min-height: 595px;
+  height: 32rem;
+  display: flex;
+  justify-content: flex-end;
   background-position: 0% 50%;
+}
+
+@media (min-width: 30rem) {
+  .img-with_background {
+    background-size: 30rem;
+  }
 }
 
 .overlay-title {
@@ -772,7 +797,6 @@ nav {
   display: flex;
   margin: 0 auto;
   flex-flow: nowrap;
-  align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -782,7 +806,7 @@ nav {
   transition: transform 0.35s;
   object-fit: cover;
   aspect-ratio: 1/1;
-  width: 28rem;
+  width: 22rem;
 }
 
 .services-block img:hover {
@@ -1008,6 +1032,7 @@ nav {
   width: 26rem;
   padding-bottom: 1rem;
   padding-right: 1rem;
+  list-style: none;
 }
 
 .component img {

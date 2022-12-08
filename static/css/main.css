@@ -352,6 +352,10 @@ nav {
   padding-left: 1rem;
 }
 
+.text-arrow h4:hover {
+  text-decoration: underline;
+}
+
 .text-orange-background {
   padding: 1rem 0 0 0;
 }
@@ -700,7 +704,7 @@ nav {
 
 .light-green-main h2 {
   color: var(--dark-blue);
-  font-size: 2rem;
+  font-size: 2.3rem;
   padding: 3rem 0 1rem 0;
 }
 
@@ -708,6 +712,12 @@ nav {
   width: 50%;
   flex-grow: 1;
   flex-wrap: wrap;
+}
+
+@media (min-width: 70rem) {
+  .light-main-text {
+    padding-right: 10.625rem;
+  }
 }
 
 .light-main-text p {
@@ -758,15 +768,21 @@ nav {
 }
 
 .services {
-  padding: 0 2rem;
-  width: 100%;
-  object-fit: cover;
+  padding: 0 2rem 0 0;
+  display: flex;
+  margin: 0 auto;
+  flex-flow: nowrap;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .services-block img {
   transition: transform 0.35s;
   object-fit: cover;
-  aspect-ratio: 2/1;
+  aspect-ratio: 1/1;
+  width: 28rem;
 }
 
 .services-block img:hover {
@@ -790,6 +806,11 @@ nav {
   margin: 4rem 0;
 }
 
+.services-block li {
+  width: 28rem;
+  overflow: hidden;
+}
+
 .services p {
   margin-bottom: 1rem;
 }
@@ -805,7 +826,7 @@ nav {
 }
 
 .page-name a,
-.page-referances a {
+.page-references a {
   text-decoration: none;
   color: var(--black);
   padding: 0 1rem;
@@ -866,7 +887,7 @@ nav {
   width: 2rem;
 }
 
-.referances {
+.references {
   width: 100%;
   padding: 0 2rem;
   flex-shrink: 0;
@@ -888,11 +909,11 @@ nav {
 
 /* referenties.html*/
 
-.our-referances {
+.our-references {
   padding: 0 2rem;
 }
 
-.page-referances {
+.page-references {
   background-color: var(--white);
   display: flex;
   position: relative;
@@ -916,47 +937,95 @@ nav {
   font-size: 0.8rem;
 }
 
-.referances-text {
+.references-text {
   margin-top: 2rem;
 }
 
-.referances-text p {
+.references-text p {
   padding-top: 1rem;
 }
 
-.referances-id-text p {
+.references-id-text p {
   color: var(--background-light-green);
   font-weight: bold;
 }
 
-.referances-id-link {
+.references-id-link {
   display: flex;
   font-family: "space-grotesk";
   padding-top: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.privé,
-.zakelijk,
-.openbaar {
+.private,
+.b2b,
+.public {
   display: flex;
   align-items: center;
   background-color: var(--hover-blue);
   padding: 0.75rem;
   margin-right: 1rem;
+  width: 14rem;
 }
 
-.privé img,
-.zakelijk img,
-.openbaar img {
+.private img,
+.b2b img,
+.public img {
   width: 1.2rem;
 }
 
-.privé a,
-.zakelijk a,
-.openbaar a {
+.private a,
+.b2b a,
+.public a {
   text-decoration: none;
   color: var(--dark-green-text);
   padding: 0 1rem;
+}
+
+.references_components {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.component:nth-child(2) {
+  background-color: var(--hover-blue);
+}
+
+.component {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.component h2 {
+  font-family: "Space Grotesk";
+  font-size: 2.82rem;
+}
+
+.component li {
+  width: 26rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.component img {
+  width: 26rem;
+  -o-object-fit: cover;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.component p {
+  height: 45px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 15px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid #74bb9f;
+  font-size: 0.82rem;
+  line-height: 1.2em;
 }
 
 /* contact.html*/
@@ -977,8 +1046,6 @@ nav {
   background-color: var(--information-orange);
   width: max-content;
   padding: 0.75rem 1.0625rem;
-}
-.send-form a {
   color: var(--white);
   text-decoration: none;
   font-weight: bold;

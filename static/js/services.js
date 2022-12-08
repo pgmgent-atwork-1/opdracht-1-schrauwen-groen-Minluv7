@@ -21,13 +21,15 @@
         .filter((service) => service.type === type)
         .map((service) => {
           return `
-          <div class="services-block">
+          <ul class="services-block">
+          <li>
           <img src="${service.image}" alt=""/>
           <h2>${service.title}</h2>
           <p>${service.description}</p>
           <div class="button-information">
           <a  href="#">${service.url}Meer informatie</a>
-          </div>
+          </li>
+          </ul>
           `;
         })
         .join("");

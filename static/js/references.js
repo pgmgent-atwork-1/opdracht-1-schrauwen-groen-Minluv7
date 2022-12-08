@@ -7,18 +7,21 @@
     },
     buildUI() {
       console.log("3. Build the user interface!");
-      if (this.$referances != null) {
-        this.$referances.innerHTML = this.generateHTMLForReferences();
+      if (this.$references != null) {
+        this.$references.innerHTML = this.generateHTMLForReferences();
       }
-      if (this.$referan != null) {
-        this.$referan.innerHTML = this.generateHTMLForOurReferan();
+      if (this.$referencesComponents != null) {
+        this.$referencesComponents.innerHTML =
+          this.generateHTMLForAllReferences();
       }
     },
 
     cacheElements() {
       console.log("2. Cache all exisiting DOM elements!");
-      this.$referances = document.getElementById("referances");
-      this.$referan = document.getElementById("referan");
+      this.$references = document.getElementById("references");
+      this.$referencesComponents = document.getElementById(
+        "references_components"
+      );
     },
     generateHTMLForReferences() {
       const references = REFERENCES.slice(0, 6);
@@ -45,22 +48,26 @@
           return "";
       }
     },
-    generateHTMLForOurReferan() {
+    generateHTMLForAllReferences() {
       const types = ["private", "b2b", "public"];
       return types
         .map((type) => {
           const references = REFERENCES.filter((ref) => ref.type === type);
           return `
+          <ul class="component">
           <div>
           <h2 id="${type}"> ${this.getTitle(type)}</h2>
-          ${references
-            .map((ref) => {
-              return `
+            ${references
+              .map((ref) => {
+                return `
+          <li>    
               <img src="${ref.image}"/>
-              <p>${ref.description}</p>`;
-            })
-            .join("")}
-          </div>
+              <p>${ref.description}</p>
+          </li>
+          </div>`;
+              })
+              .join("")}
+          </ul>
           `;
         })
         .join("");

@@ -40,6 +40,7 @@
   --information-orange: #ff6c37;
   --dark-blue: #13322b;
   --arrow-background-green: #008754;
+  --important-stars-red: hsl(0, 100%, 50%);
 }
 body {
   font-family: "adelle-sans";
@@ -779,7 +780,7 @@ nav {
 }
 
 .orange-symbol img {
-  width: 2.2rem;
+  width: 2.0625rem;
   padding-right: 1rem;
 }
 
@@ -1057,23 +1058,124 @@ nav {
 .hero-component-contact {
   background-image: url(../images/aanleg_hero-componen.jpeg);
 }
-.forms {
+.forums {
   background-color: var(--hover-blue);
   padding: 2rem 2rem 24rem 2rem;
   margin-bottom: -23rem;
 }
-.forms h2 {
+.forums h2 {
   font-size: 1.8rem;
+  line-height: 1;
+  padding: 1rem 0;
   font-weight: bold;
 }
 
-.send-form {
+.send-forum {
   background-color: var(--information-orange);
   width: max-content;
   padding: 0.75rem 1.0625rem;
   color: var(--white);
   text-decoration: none;
   font-weight: bold;
+}
+
+input,
+textarea {
+  padding-bottom: 1rem;
+  border-style: none none solid;
+  border-width: 0.0625rem;
+  border-color: #000 #000 #13322b;
+  background-color: transparent;
+  font-size: 1rem;
+}
+.radio-element {
+  padding-top: 2rem;
+}
+
+.radio-element span {
+  color: var(--important-stars-red);
+}
+
+.company-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.province {
+  display: flex;
+  flex-direction: column;
+  max-width: max-content;
+}
+
+input[type="radio"] {
+  margin-right: 1rem;
+}
+
+.province span {
+  color: var(--important-stars-red);
+}
+.last-name {
+  display: flex;
+  flex-direction: column;
+}
+.last-name span {
+  color: var(--important-stars-red);
+}
+.first-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-name span {
+  color: var(--important-stars-red);
+}
+
+.phone-number {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-number span {
+  color: var(--important-stars-red);
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+}
+
+.email span {
+  color: var(--important-stars-red);
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  border-style: none none solid;
+  border-width: 1px;
+  border-color: #000 #000 #13322b;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.message span {
+  color: var(--important-stars-red);
+}
+
+.privacy-policy {
+  padding: 2rem 0;
+}
+.privacy-policy a {
+  color: var(--black);
+  font-weight: bold;
+  /* text-decoration: underline var(--important-stars-red); */
+  text-decoration: none;
+  border-bottom: 2px solid red;
+}
+
+.privacy-policy a:hover {
+  border-bottom: none;
 }
 
 /* footer */

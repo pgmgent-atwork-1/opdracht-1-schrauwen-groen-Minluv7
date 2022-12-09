@@ -6,15 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Schrauwen Groen</title>
     <link
-      rel="icon"
-      href="static/images/zonder_naam_logo.png"
-      type="image/x-icon"
-    />
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="static/images/favicon/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="static/images/favicon/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="static/images/favicon/favicon-16x16.png"
+  />
+  <link rel="manifest" href="static/images/favicon/site.webmanifest" />
+  <link
+    rel="mask-icon"
+    href="static/images/favicon/safari-pinned-tab.svg"
+    color="#5bbad5"
+  />
+  <link rel="shortcut icon" href="static/images/favicon/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta
+    name="msapplication-config"
+    content="static/images/favicon/browserconfig.xml"
+  />
+  <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="static/css/reset.css" />
     <link rel="stylesheet" href="static/css/main.css" />
   </head>
   <body>
-    <div>
+
       <header>
         <nav>
           <div class="header__nav">
@@ -86,7 +111,7 @@
             </p>
           </div>
         </article>
-        <article class="forms">
+        <article class="forums">
           <h2>Stuur ons een bericht</h2>
           <p>
             Vul onderstaand formulier in om ons een bericht te sturen. We
@@ -96,7 +121,7 @@
           <div>
             <div class="radio-element">
               <legend>Ik zoek informatie als <span>*</span></legend>
-              <div class="private">
+              <div class="radio">
                 <input
                   type="radio"
                   id="Particulier"
@@ -105,7 +130,7 @@
                 />
                 <label for="Particulier">Particulier</label>
               </div>
-              <div class="company">
+              <div class="radio">
                 <input
                   type="radio"
                   id="Bedrijf/instelling"
@@ -114,7 +139,7 @@
                 />
                 <label for="Bedrijf/instelling">Bedrijf/instelling</label>
               </div>
-              <div class="public">
+              <div class="radio">
                 <input
                   type="radio"
                   id="Openbaar bestuur"
@@ -194,7 +219,7 @@
               <label for="privacy">Ik ga akkoord met het <span><a href="#">Privacybeleid</a></span></label>   
             </div>
             <div>
-              <a class="send-form" href="#">Verzenden</a>
+              <a class="send-forum" href="#">Verzenden</a>
             </div>
           </div>
         </article>
@@ -294,6 +319,6 @@
           </p>
         </div>
       </footer>
-    </div>
+    
   </body>
 </html>

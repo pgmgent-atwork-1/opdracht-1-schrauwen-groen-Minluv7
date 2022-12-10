@@ -27,7 +27,7 @@
           <h2>${service.title}</h2>
           <p>${service.description}</p>
           <div class="button-information">
-          <a  href="#">${service.url}Meer informatie</a>
+          <a  href="#">${service.url}<p>Meer informatie</p></a>
           </li>
           </ul>
           `;

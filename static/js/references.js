@@ -28,10 +28,12 @@
       return references
         .map((references) => {
           return `
-          <div class="reference-first">
-          <img src="${references.image}" alt=""/>
+          <ul class="reference-first">
+          <li>
+          <img src="${references.image}" alt="references image"/>
           <p>${references.description}</p>
-        </div>
+          </li>
+        </ul>
         `;
         })
         .join("");

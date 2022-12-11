@@ -608,7 +608,6 @@ nav {
 
 .dark-green-main p {
   color: var(--white);
-  /* padding-bottom: 2rem; */
 }
 
 .dark-green-main h2 {
@@ -1070,14 +1069,6 @@ nav {
   background-color: var(--hover-blue);
 }
 
-/* @media (min-width: 85rem) {
-  .component:nth-child(2) {
-    width: 278%;
-    margin: 0rem -81rem;
-    padding: 0 0 0 93%;
-  }
-} */
-
 .component {
   display: flex;
   flex-wrap: wrap;
@@ -1140,7 +1131,6 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* width: 218%; */
 }
 
 @media (min-width: 40rem) {
